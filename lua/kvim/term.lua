@@ -59,8 +59,8 @@ end
 -- Window --------------------------------------------------------------------
 H.createFloatingWin = function(opts)
 	opts = opts or {}
-	local width = math.floor(vim.o.columns * (Term.config.win.width or 0.8))
-	local height = math.floor(vim.o.lines * (Term.config.win.height or 0.8))
+	local width = math.floor(vim.o.columns * (opts.width or 0.8))
+	local height = math.floor(vim.o.lines * (opts.height or 0.8))
 	local buf = nil
 	if vim.api.nvim_buf_is_valid(opts.buf) then
 		buf = opts.buf
